@@ -1,1 +1,12 @@
-# imc-2026-starlink-webrtc
+# Looking at Stars: Analyzing Real-Time Video Conferencing over Starlink
+
+This repository contains the analysis scripts for the IMC 2026 Paper: Looking at Stars: Analyzing Real-Time Video Conferencing over Starlink
+
+## Abstract
+SpaceX's Starlink has emerged as one of the largest network operators worldwide, serving over ten million subscribers across more than 150 countries. Real-time applications such as video conferencing, cloud gaming, and teleoperated control increasingly run over it. Yet how WebRTC's congestion controllers respond to Starlink's sub-second dynamics, namely its 15-second reconfigurations and satellite handovers, remains poorly understood. We present the first cross-layer measurement of WebRTC over Starlink, instrumenting Google Congestion Control (GCC) in a custom LibWebRTC testbed and pairing it with browser-side measurements of Microsoft Teams. Our campaign covers three vantage points in Europe and one in Antarctica at 2.5 and 10 Mbps targets. Even at Teams' conservative 2.5 Mbps uplink cap, the target is missed up to 34.9% of the time. Using browser metrics alone, we attribute up to 46% of these below-target periods to Starlink reconfigurations. GCC's delay-based estimator, which controls the bandwidth estimate 96–99% of the time, is the dominant pathway by which Starlink reaches the applications. Its overuse transitions cluster tightly around reconfigurations, while loss-based transitions remain uniformly distributed even at 10 Mbps. Satellite handovers, distinct from reconfigurations, cause longer-lasting overuse and the most aggressive sending-rate reductions in our dataset. Together, these findings reveal that GCC's conservatism, not intrinsic loss on the link, is the primary cost of Starlink's structural perturbations to real-time video.
+
+## Dataset
+The data for running the notebooks is available at [mediaTUM](https://mediatum.ub.tum.de/1860734). The data is not compressed and should be downloaded into the `data` directory of this repository. The scripts operate on this directory layout.
+
+## Reproducibility
+The plots were generated using python 3.10.13. The specific packages and their versions can be found in `requirements.txt`. We used nbconvert to transform our notebooks into standalone python scripts for convenience. An additional requirement are loaders from https://github.com/yannismate/webrtc-bench/tree/main/analysis/loaders. The loaders directory should be located at `./analysis/loaders`.
