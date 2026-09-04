@@ -9,4 +9,4 @@ SpaceX's Starlink has emerged as one of the largest network operators worldwide,
 The data for running the notebooks is available at [mediaTUM](https://mediatum.ub.tum.de/1860734). The data is not compressed and should be downloaded into the `data` directory of this repository. The scripts operate on this directory layout.
 
 ## Reproducibility
-The plots were generated using python 3.10.13. The specific packages and their versions can be found in `requirements.txt`. We used nbconvert to transform our notebooks into standalone python scripts for convenience. An additional requirement are loaders from https://github.com/yannismate/webrtc-bench/tree/main/analysis/loaders. The loaders directory should be located at `./analysis/loaders`.
+The plots were generated using python 3.10.13. The specific packages and their versions can be found in `requirements.txt`. We used nbconvert to transform our notebooks into standalone python scripts for convenience. An additional requirement are loaders from https://github.com/yannismate/webrtc-bench/tree/main/analysis/loaders. The loaders directory should be located at `./analysis/loaders` of this project as well.
