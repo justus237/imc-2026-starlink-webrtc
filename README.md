@@ -1,6 +1,30 @@
 # Looking at Stars: Analyzing Real-Time Video Conferencing over Starlink
 
-This repository contains the analysis scripts for the IMC 2026 Paper: Looking at Stars: Analyzing Real-Time Video Conferencing over Starlink
+This repository contains the analysis scripts for the IMC 2026 Paper: *[Looking at Stars: Analyzing Real-Time Video Conferencing over Starlink](https://dl.acm.org/doi/10.1145/3777912.3839805)*
+
+<details>
+<summary>BibTeX</summary>
+
+```bibtex
+@inproceedings{10.1145/3777912.3839805,
+author = {Fries, Justus and Matezki, Yannis and Bose, Rohan and Mohan, Nitinder},
+title = {Looking at Stars: Analyzing Real-Time Video Conferencing over Starlink},
+year = {2026},
+isbn = {9798400723278},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3777912.3839805},
+doi = {10.1145/3777912.3839805},
+booktitle = {Proceedings of the 2026 ACM Internet Measurement Conference},
+pages = {1143–1152},
+numpages = {10},
+keywords = {starlink, satellite network, WebRTC, video conferencing},
+location = {Karlsruhe Institute of Technology, Karlsruhe, Germany},
+series = {IMC '26}
+}
+```
+</details>
+
 
 ## Abstract
 SpaceX's Starlink has emerged as one of the largest network operators worldwide, serving over ten million subscribers across more than 150 countries. Real-time applications such as video conferencing, cloud gaming, and teleoperated control increasingly run over it. Yet how WebRTC's congestion controllers respond to Starlink's sub-second dynamics, namely its 15-second reconfigurations and satellite handovers, remains poorly understood. We present the first cross-layer measurement of WebRTC over Starlink, instrumenting Google Congestion Control (GCC) in a custom LibWebRTC testbed and pairing it with browser-side measurements of Microsoft Teams. Our campaign covers three vantage points in Europe and one in Antarctica at 2.5 and 10 Mbps targets. Even at Teams' conservative 2.5 Mbps uplink cap, the target is missed up to 34.9% of the time. Using browser metrics alone, we attribute up to 46% of these below-target periods to Starlink reconfigurations. GCC's delay-based estimator, which controls the bandwidth estimate 96–99% of the time, is the dominant pathway by which Starlink reaches the applications. Its overuse transitions cluster tightly around reconfigurations, while loss-based transitions remain uniformly distributed even at 10 Mbps. Satellite handovers, distinct from reconfigurations, cause longer-lasting overuse and the most aggressive sending-rate reductions in our dataset. Together, these findings reveal that GCC's conservatism, not intrinsic loss on the link, is the primary cost of Starlink's structural perturbations to real-time video.
